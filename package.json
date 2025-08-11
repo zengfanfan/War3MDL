@@ -1,0 +1,56 @@
+{
+  "name": "war3mdl",
+  "displayName": "Warcraft 3 MDL",
+  "description": "Syntax highlighting for Warcraft 3 MDL files",
+  "version": "0.1.0",
+  "icon": "res/icon.png",
+  "publisher": "zengfanfan",
+  "author": "Zeng Fanfan",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "war3mdl",
+        "aliases": [
+          "War3MDL",
+          "Warcraft 3 MDL",
+          "mdl"
+        ],
+        "extensions": [
+          ".mdl"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "war3mdl",
+        "scopeName": "source.war3mdl",
+        "path": "./syntaxes/war3mdl.tmLanguage.json"
+      }
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/zengfanfan/War3MDL/issues"
+  },
+  "homepage": "https://github.com/zengfanfan/War3MDL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zengfanfan/War3MDL.git"
+  },
+  "keywords": [
+    "warcraft",
+    "warcraft3",
+    "mdl",
+    "war3",
+    "model",
+    "language",
+    "syntax"
+  ],
+  "license": "See LICENSE"
+}

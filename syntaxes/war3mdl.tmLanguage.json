@@ -1,0 +1,107 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Warcraft 3 MDL",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#brackets"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.war3mdl",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.war3mdl",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.war3mdl",
+          "match": "\\bstatic\\b"
+        },
+        {
+          "name": "keyword.control.frame.war3mdl",
+          "match": "\\b\\d+:"
+        },
+        {
+          "name": "entity.name.tag.war3mdl",
+          "match": "\\b[_a-zA-Z]\\w*\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.war3mdl",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.war3mdl",
+          "match": "\\\\[\"']"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.float.war3mdl",
+          "match": "\\b[+-]?([0-9]+\\.[0-9]*|\\.[0-9]+)\\b"
+        },
+        {
+          "name": "constant.numeric.float.exponent.war3mdl",
+          "match": "\\b[+-]?[0-9]+(\\.[0-9]+\\b)?[Ee][+-]?[0-9]+\\b"
+        },
+        {
+          "name": "constant.numeric.integer.war3mdl",
+          "match": "\\b[+-]?[0-9]+\\b"
+        },
+        {
+          "name": "constant.numeric.integer.hex.war3mdl",
+          "match": "\\b[+-]?0[xX][0-9a-fA-F]+\\b"
+        }
+      ]
+    },
+    "operators": {
+      "name": "keyword.operator.war3mdl",
+      "match": "[=,:<>+\\-*/%&|^!~?]"
+    },
+    "brackets": {
+      "patterns": [
+        {
+          "name": "punctuation.definition.block.war3mdl",
+          "match": "[\\{\\}]"
+        },
+        {
+          "name": "punctuation.definition.brackets.war3mdl",
+          "match": "[\\[\\]]"
+        },
+        {
+          "name": "punctuation.definition.parameters.war3mdl",
+          "match": "[\\(\\)]"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.war3mdl"
+}

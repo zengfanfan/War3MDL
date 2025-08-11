@@ -1,0 +1,22 @@
+.git
+.github
+.gitignore
+.gitattributes
+.vscode
+.vscode-test
+node_modules
+out
+src
+tsconfig.json
+webpack.config.js
+*.vsix
+.yarnrc
+yarn.lock
+vsc-extension-quickstart.md
+
+# Development files
+.eslintrc.json
+.eslintignore
+.prettierrc
+.prettierignore
+*.log
